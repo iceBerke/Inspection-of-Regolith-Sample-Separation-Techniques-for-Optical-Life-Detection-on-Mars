@@ -1,0 +1,58 @@
+# Equal variances tests
+
+# Developed with the help of AI (Claude.Ai and Perplexity)
+
+from scipy.stats import bartlett
+import scipy.stats as stats
+import numpy as np
+
+# Your data
+mms2_inc_v_5sec = [104.12, 12468.96]
+print(np.mean(mms2_inc_v_5sec))
+
+mms2_inc_v_15sec = [2277.68, 1825.30, 4121.88]
+print(np.mean(mms2_inc_v_15sec))
+
+mms2_inc_v_30sec = [545.36, 356.53, 23224.55]
+print(np.mean(mms2_inc_v_30sec))
+
+mms2_inc_v_60sec = [1138.87, 18101.11, 1091.28]
+print(np.mean(mms2_inc_v_60sec))
+
+mms2_inc_v_120sec =[230.95, 91.50, 173.21]
+print(np.mean(mms2_inc_v_120sec))
+
+mms2_inc_v_300sec = [76.01, 107.14, 80.01]
+print(np.mean(mms2_inc_v_300sec))
+
+mms2_inc_hs = [197.76, 48.63, 27.79]
+print(np.mean(mms2_inc_hs))
+
+
+# Perform Bartlett's test
+#statistic, p_value = bartlett(group1, group2, group3)
+
+#print(f"Bartlett's test statistic: {statistic:.4f}")
+#print(f"p-value: {p_value:.4f}")
+
+#if p_value > 0.05:
+#    print("The variances are not significantly different (fail to reject H0).")
+#else:
+#    print("The variances are significantly different (reject H0).")
+
+# Levene's test (default is center='median', recommended for skewed data)
+statistic_2, p_value_2 = stats.levene(mms2_inc_v_5sec, mms2_inc_v_15sec, mms2_inc_v_30sec, mms2_inc_v_60sec, mms2_inc_v_120sec, mms2_inc_v_300sec, mms2_inc_hs, center='median')
+
+print(f"Levene's test statistic: {statistic_2:.4f}")
+print(f"p-value: {p_value_2:.4f}")
+
+if p_value_2 > 0.05:
+    print("The variances are not significantly different (fail to reject H0).")
+else:
+    print("The variances are significantly different (reject H0).")
+
+---
+
+Levene's test statistic: 0.8062
+p-value: 0.5828
+The variances are not significantly different (fail to reject H0).

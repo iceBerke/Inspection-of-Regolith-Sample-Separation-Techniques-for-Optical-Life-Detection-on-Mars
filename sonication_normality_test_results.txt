@@ -1,0 +1,57 @@
+Normality tests:
+
+- Sonication 30 seconds
+
+Kolmogorov-Smirnov test:
+  Statistic = 0.9997, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.8858, p-value = 0.1805
+
+- Sonication 1 minute
+
+Kolmogorov-Smirnov test:
+  Statistic = 0.9991, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.8463, p-value = 0.0010
+
+- Sonication 2 minutes
+
+Kolmogorov-Smirnov test:
+  Statistic = 1.0000, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.9736, p-value = 0.8449
+
+- Sonication 5 minutes
+
+Kolmogorov-Smirnov test:
+  Statistic = 1.0000, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.7818, p-value = 0.0008
+
+- Sonication 10 minutes
+
+Kolmogorov-Smirnov test:
+  Statistic = 0.5000, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.7408, p-value = 0.0000
+
+- Sonication 30 minutes
+
+Kolmogorov-Smirnov test:
+  Statistic = 1.0000, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.9501, p-value = 0.4577
+
+- Sonication 60 minutes
+
+Kolmogorov-Smirnov test:
+  Statistic = 0.9495, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.7493, p-value = 0.0053
+
+- Sonication 120 minutes
+
+Kolmogorov-Smirnov test:
+  Statistic = 0.9999, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.9694, p-value = 0.8881

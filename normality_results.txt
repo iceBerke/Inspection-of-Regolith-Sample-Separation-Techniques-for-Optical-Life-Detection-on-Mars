@@ -1,0 +1,54 @@
+Normality Results
+
+- MMS-2 Incubation
+
+-- Vortex 5 seconds
+
+Kolmogorov-Smirnov test:
+  Statistic = 1.0000, p-value = 0.0000
+c:\Users\asus\OneDrive\Ambiente de Trabalho\TU_Berlin\TU_Berlin_Astrobiology\Hanne\q_q_plot_v2.py:44: SmallSampleWarning: One or more sample arguments is too small; all returned values will be NaN. See documentation for sample size requirements.
+  shapiro_stat, shapiro_p = shapiro(mms2_inc_v_5sec)
+Shapiro-Wilk test:
+  Statistic = nan, p-value = nan
+
+-- Vortex 15 seconds
+
+Kolmogorov-Smirnov test:
+  Statistic = 1.0000, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.8909, p-value = 0.3572
+
+-- Vortex 30 seconds
+
+Kolmogorov-Smirnov test:
+  Statistic = 1.0000, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.7562, p-value = 0.0137
+
+-- Vortex 60 seconds
+
+Kolmogorov-Smirnov test:
+  Statistic = 1.0000, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.7521, p-value = 0.0046
+
+-- Vortex 120 seconds
+
+Kolmogorov-Smirnov test:
+  Statistic = 1.0000, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.9902, p-value = 0.8111
+
+-- Vortex 300 seconds
+
+Kolmogorov-Smirnov test:
+  Statistic = 1.0000, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.8446, p-value = 0.2261
+
+-- Hand Shaking
+
+Kolmogorov-Smirnov test:
+  Statistic = 1.0000, p-value = 0.0000
+Shapiro-Wilk test:
+  Statistic = 0.8404, p-value = 0.2151

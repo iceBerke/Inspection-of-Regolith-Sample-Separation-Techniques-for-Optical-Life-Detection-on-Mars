@@ -1,0 +1,49 @@
+# Equal variances tests
+
+# Developed with the help of AI (Claude.Ai and Perplexity)
+
+from scipy.stats import bartlett
+import scipy.stats as stats
+
+# Your data
+s_30sec = [7.61, 5.94, 7.77, 6.98, 3.45, 10.00, 7.41, 7.69, 14.29]
+s_1min = [6.02, 5.81, 8.64, 17.14, 11.58, 21.57, 5.56, 5.33, 5.45, 4.17, 4.23, 6.33, 10.64, 10.87, 13.64, 8.82, 3.13, 4.26, 19.35, 11.11, 32.20, 34.33, 23.94, 25.30, 35.54, 33.33, 36.90]
+s_2min = [62.31, 69.47, 52.67, 26.98, 11.86, 16.22, 36.07, 36.17, 48.33, 45.54, 14.08, 7.69, 5.75, 32.61, 33.96, 30.61, 22.22, 41.38, 44.44]
+s_5min = [20.00, 12.93, 13.22, 12.71, 13.39, 19.38, 13.82, 12.24, 14.84, 12.57, 66.67, 47.42, 64.15, 65.31, 50.00, 54.39, 59.52, 26.91]
+s_10min = [0.00, 1.05, 0.00, 0.00, 0.00, 0.00, 2.63, 0.00, 0.00, 8.54, 
+    7.89, 6.82, 9.46, 0.00, 1.61, 0.80, 1.38, 1.50, 3.70, 0.59, 
+    1.70, 1.17, 6.82, 4.35, 7.91, 3.61, 7.87, 4.71, 0.00, 0.00, 
+    0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.00
+]
+s_30min = [70.27, 31.25, 44.12, 54.05, 27.03, 10.39, 6.67, 20.25, 79.41, 20.00, 46.67, 46.43, 46.43, 44.00, 55.56, 47.06, 47.37]
+s_60min = [58.33, 42.86, 33.33, 6.00, 1.72, 1.64, 2.98, 4.97, 4.49]
+s_120min = [7.94, 7.41, 3.77, 12.50, 15.00, 19.30]
+
+
+# Perform Bartlett's test
+#statistic, p_value = bartlett(group1, group2, group3)
+
+#print(f"Bartlett's test statistic: {statistic:.4f}")
+#print(f"p-value: {p_value:.4f}")
+
+#if p_value > 0.05:
+#    print("The variances are not significantly different (fail to reject H0).")
+#else:
+#    print("The variances are significantly different (reject H0).")
+
+# Levene's test (default is center='median', recommended for skewed data)
+statistic_2, p_value_2 = stats.levene(s_30sec, s_1min, s_2min, s_5min, s_10min, s_30min, s_60min, s_120min, center='median')
+
+print(f"Levene's test statistic: {statistic_2:.4f}")
+print(f"p-value: {p_value_2:.4f}")
+
+if p_value_2 > 0.05:
+    print("The variances are not significantly different (fail to reject H0).")
+else:
+    print("The variances are significantly different (reject H0).")
+
+---
+
+Levene's test statistic: 6.3459
+p-value: 0.0000
+The variances are significantly different (reject H0).
